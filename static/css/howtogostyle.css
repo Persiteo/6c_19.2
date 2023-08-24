@@ -16,8 +16,8 @@ body {
 	padding: 0;
 }*/
 #box_map	{
-	width: 800px;
-	height: 600px;
+	width: 600px;
+	height: 400px;
 	margin-left: -300px;
 	margin-top: -200px;
 	position: absolute;
