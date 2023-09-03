@@ -1,21 +1,18 @@
 from django.shortcuts import render
 
 
+
 def index(request):
-    # if request.method == 'POST':
-    #     name = request.POST.get('name')
-    #     email = request.POST.get('email')
-    #     message = request.POST.get('message')
-    #     print(f'You have new message from {name}({email}): {message}')
     return render(request, 'catalog/index.html')
 
 
 def contacts(request):
-    # if request.method == 'POST':
-    #     name = request.POST.get('name')
-    #     email = request.POST.get('email')
-    #     message = request.POST.get('message')
-    #     print(f'You another one new message from {name}({email}): {message}')
+    if request.method == 'POST':
+        name = request.POST.get('Textarea1')
+        email = request.POST.get('Email1')
+        message = request.POST.get('Textarea2')
+        with open('log.txt', 'a') as f:
+            f.writelines(f'{name} желает записаться на: {message} (Для связи: {email})\n')
     return render(request, 'catalog/contacts.html')
 
 
